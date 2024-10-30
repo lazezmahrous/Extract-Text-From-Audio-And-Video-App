@@ -16,11 +16,11 @@ groups:
     # checkUnusedVariables: false
     # checkUnusedAssets: false
 
-  # - path: assets/svg
-  #   class_name: AppSvg
-  #   types: [ .svg ]
-  #   outputPath: lib/core/constant
-  #   warnings: true
+  - path: assets/svgs
+    class_name: AppSvg
+    types: [ .svg ]
+    outputPath: lib/core/constant
+    warnings: true
 
 ## Multiple path
   # - path:

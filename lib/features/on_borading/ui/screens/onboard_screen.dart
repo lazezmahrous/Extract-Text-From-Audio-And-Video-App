@@ -60,7 +60,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
           state.whenOrNull(
             skip: () async {
               await _storeOnboardInfo();
-              context.pushReplacementNamed(Routes.homeScreen);
+              context.pushReplacementNamed(Routes.signUpScreen);
             },
             next: () async {
               await _pageController.nextPage(
@@ -113,7 +113,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                             child: Text(
                               screens[index].desc,
                               textAlign: TextAlign.center,
-                              style: TextStyles.font15BlueSemiBold,
+                              style: TextStyles.font15GraySemiBold,
                             ),
                           ),
                           verticalSpace(20),

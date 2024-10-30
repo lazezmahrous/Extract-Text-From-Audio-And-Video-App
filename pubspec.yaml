@@ -15,11 +15,14 @@ dependencies:
   hexcolor: ^3.0.1
   flutter_screenutil: ^5.9.3
   freezed: ^2.5.7
+  dio: ^5.7.0
+  pretty_dio_logger: ^1.4.0
+  flutter_secure_storage: ^4.2.1
+  flutter_spinkit: ^5.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  dio: ^5.7.0
   retrofit: ^4.4.1
   retrofit_generator: ^9.1.2
   json_annotation: ^4.9.0
