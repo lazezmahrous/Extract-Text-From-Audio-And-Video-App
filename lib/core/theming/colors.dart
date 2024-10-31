@@ -5,6 +5,7 @@ class ColorsManager {
   ColorsManager._();
   static const Color mainBlue = Color(0xff060AFF);
   static const Color mainWhite = Color(0xffFCFDFD);
+  static const Color mainReed = Color(0xffCC2828);
   static Color maingray = HexColor('#B5B5B5');
   static Color secondGray = HexColor('#5A5A5A');
   static Color dark = HexColor('#1E1E1E');

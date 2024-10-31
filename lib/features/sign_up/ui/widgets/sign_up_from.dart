@@ -1,3 +1,4 @@
+import 'package:extract_text_from_audio_and_video/core/helpers/spacing.dart';
 import 'package:extract_text_from_audio_and_video/core/theming/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,7 @@ class _SignUpFromWidgetState extends State<SignUpFromWidget> {
                   hintText: 'Full Name',
                   controller: context.read<SignUpCubit>().nameController),
             ),
+            verticalSpace(10),
             SignUpTextField(
               iconPath: AppSvg.at,
               appTextFormField: AppTextFormField(
@@ -44,6 +46,7 @@ class _SignUpFromWidgetState extends State<SignUpFromWidget> {
                 },
               ),
             ),
+            verticalSpace(10),
             SignUpTextField(
               iconPath: AppSvg.icons8Password,
               appTextFormField: AppTextFormField(
@@ -72,6 +75,7 @@ class _SignUpFromWidgetState extends State<SignUpFromWidget> {
                 },
               ),
             ),
+            verticalSpace(10),
             SignUpTextField(
               iconPath: AppSvg.icons8Password,
               appTextFormField: AppTextFormField(
