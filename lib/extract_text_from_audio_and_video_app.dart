@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:extract_text_from_audio_and_video/core/routing/routers.dart';
 
+import 'core/helpers/shared_pref_constans.dart';
 import 'core/routing/app_router.dart';
 import 'core/theming/colors.dart';
 
@@ -36,7 +37,7 @@ class _TextToSpechAppState extends State<ExtractTextFromAudioAndVideoApp> {
           ],
           // supportedLocales: S.delegate.supportedLocales,
           debugShowCheckedModeBanner: false,
-          initialRoute: Routes.onBoardingScreen,
+          initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.onBoardingScreen,
           onGenerateRoute: widget.appRouter.generateRoute,
         );
       },

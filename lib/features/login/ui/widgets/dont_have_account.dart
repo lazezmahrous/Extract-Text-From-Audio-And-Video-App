@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import '../../../../core/routing/routers.dart';
 import '../../../../core/theming/styles.dart';
 
-class AlreadyHaveAccountText extends StatelessWidget {
-  const AlreadyHaveAccountText({super.key});
+class DontHaveAccount extends StatelessWidget {
+  const DontHaveAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +15,15 @@ class AlreadyHaveAccountText extends StatelessWidget {
       text: TextSpan(
         children: [
           TextSpan(
-            text: 'Already have an account?',
+            text: 'Dont have account ?',
             style: TextStyles.font14DarkBlueMedium,
           ),
           TextSpan(
-            text: ' Login',
+            text: ' Sign Up',
             style: TextStyles.font15BlueSemiBold,
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                context.pushNamed(Routes.loginScreen);
+                context.pushNamed(Routes.signUpScreen);
               },
           ),
         ],

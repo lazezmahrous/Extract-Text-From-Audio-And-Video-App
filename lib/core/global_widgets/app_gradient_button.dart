@@ -36,7 +36,7 @@ class AppGradientButton extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          borderRadius: BorderRadius.circular(16.r),
+          borderRadius: BorderRadius.circular(25.r),
         ),
         width: size.width,
         height: size.height,

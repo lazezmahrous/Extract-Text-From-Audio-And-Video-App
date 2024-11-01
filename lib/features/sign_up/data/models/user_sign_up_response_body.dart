@@ -8,7 +8,7 @@ class UserSignUpResponseBody {
   @JsonKey(name: 'full_name')
   final String fullName;
   final String token;
-  final String code;
+  final int code;
   final String message;
   UserSignUpResponseBody({
     required this.fullName,

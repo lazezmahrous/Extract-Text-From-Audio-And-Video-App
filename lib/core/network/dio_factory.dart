@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:extract_text_from_audio_and_video/core/helpers/constans.dart';
+import 'package:extract_text_from_audio_and_video/core/helpers/shared_pref_constans.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 import '../helpers/shared_pref_helper.dart';

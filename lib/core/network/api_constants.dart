@@ -1,9 +1,8 @@
 class ApiConstants {
-  static const String apiBaseUrl = "http://192.168.175.101:5000/";
+  static const String apiBaseUrl = "http://192.168.1.9:5000/";
 
   static const String login = "auth/login";
   static const String signup = "auth/signup";
-  
 }
 
 class ApiErrors {
