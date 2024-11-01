@@ -1,9 +1,11 @@
 import 'package:bloc/bloc.dart';
+import 'package:extract_text_from_audio_and_video/core/global_data/models/user_data_model.dart';
 import 'package:extract_text_from_audio_and_video/features/sign_up/data/models/user_sign_up_request_body.dart';
 import 'package:extract_text_from_audio_and_video/features/sign_up/data/repos/sign_up_repo.dart';
 import 'package:extract_text_from_audio_and_video/features/sign_up/logic/cubit/sign_up_state.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../../../../core/helpers/hive_helper.dart';
 import '../../../../core/helpers/shared_pref_constans.dart';
 import '../../../../core/helpers/shared_pref_helper.dart';
 import '../../../../core/network/dio_factory.dart';
@@ -34,6 +36,11 @@ class SignUpCubit extends Cubit<SignUpState> {
       print(signupResponse.token);
       await saveToken(signupResponse.token);
       DioFactory.setTokenIntoHeaderAfterLogin(signupResponse.token);
+      await saveUserData(
+          UserDataModel(
+              userName: signupResponse.fullName,
+              userEmail: signupResponse.email),
+          signupResponse.token);
       emit(SignUpState.success(user: signupResponse));
     }, failure: (error) {
       emit(SignUpState.error(error: error.apiErrorModel.message ?? ''));
@@ -42,5 +49,10 @@ class SignUpCubit extends Cubit<SignUpState> {
 
   Future<void> saveToken(String token) async {
     await SharedPrefHelper.setSecuredString(SharedPrefKeys.userToken, token);
+  }
+
+  Future<void> saveUserData(UserDataModel userData, String token) async {
+    print(userData.userEmail);
+    await HiveHeleper.saveUserData(userData);
   }
 }

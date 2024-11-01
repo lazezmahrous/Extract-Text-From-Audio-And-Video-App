@@ -14,7 +14,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   await setupGetIt();
-  await HiveDatabase.initHive();
+  await HiveHeleper.initHive();
   await checkIfLoggedInUser();
   runApp(
     ExtractTextFromAudioAndVideoApp(

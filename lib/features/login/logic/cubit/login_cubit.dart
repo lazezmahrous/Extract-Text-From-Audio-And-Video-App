@@ -7,6 +7,8 @@ import 'package:extract_text_from_audio_and_video/features/login/logic/cubit/log
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
+import '../../../../core/global_data/models/user_data_model.dart';
+import '../../../../core/helpers/hive_helper.dart';
 import '../../../../core/network/dio_factory.dart';
 
 class LoginCubit extends Cubit<LoginState> {
@@ -25,6 +27,7 @@ class LoginCubit extends Cubit<LoginState> {
     ));
     response.when(success: (loginResponse) async {
       await saveToken(loginResponse.token);
+      saveUserData(UserDataModel(userName: loginResponse.email, userEmail: loginResponse.email), loginResponse.token);
       DioFactory.setTokenIntoHeaderAfterLogin(loginResponse.token);
       emit(LoginState.success(user: loginResponse));
     }, failure: (error) {
@@ -32,8 +35,12 @@ class LoginCubit extends Cubit<LoginState> {
     });
   }
 
-  Future<void> saveToken(String token)async {
-      await SharedPrefHelper.setSecuredString(SharedPrefKeys.userToken, token);
+  Future<void> saveToken(String token) async {
+    await SharedPrefHelper.setSecuredString(SharedPrefKeys.userToken, token);
   }
 
+  Future<void> saveUserData(UserDataModel userData, String token) async {
+    print(userData.userEmail);
+    await HiveHeleper.saveUserData(userData);
+  }
 }

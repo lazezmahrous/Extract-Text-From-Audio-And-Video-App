@@ -7,11 +7,13 @@ part 'user_sign_up_response_body.g.dart';
 class UserSignUpResponseBody {
   @JsonKey(name: 'full_name')
   final String fullName;
+  final String email;
   final String token;
   final int code;
   final String message;
   UserSignUpResponseBody({
     required this.fullName,
+    required this.email,
     required this.token,
     required this.code,
     required this.message,
