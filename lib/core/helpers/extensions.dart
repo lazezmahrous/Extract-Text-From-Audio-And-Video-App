@@ -5,14 +5,6 @@ extension Navigation on BuildContext {
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);
   }
 
-  // Future<dynamic> pushReplacementToEnterResult(int result) {
-  //   return Navigator.of(this).pushReplacement(MaterialPageRoute(
-  //     builder: (context) => EnterResultScreen(
-  //       result: result,
-  //     ),
-  //   ));
-  // }
-
   Future<dynamic> pushReplacementNamed(String routeName, {Object? arguments}) {
     return Navigator.of(this)
         .pushReplacementNamed(routeName, arguments: arguments);

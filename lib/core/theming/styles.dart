@@ -11,10 +11,48 @@ class TextStyles {
     fontWeight: FontWeightHelper.semiBold,
     color: Colors.black,
   );
+  static TextStyle font16DarkSemiBold = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.dark,
+  );
 
   static TextStyle font15BlueSemiBold = TextStyle(
     fontSize: 15.sp,
     fontWeight: FontWeightHelper.semiBold,
-    color: ColorsManager.gray,
+    color: ColorsManager.mainBlue,
+  );
+  static TextStyle font15GraySemiBold = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.maingray,
+  );
+
+  static TextStyle font32SemiBold = TextStyle(
+    fontSize: 32.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.dark,
+  );
+  static TextStyle font15GrayMedium = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.maingray,
+  );
+
+  static TextStyle font13GrayRegular = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.maingray,
+  );
+  static TextStyle font13DarkGrayRegular = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.secondGray,
+  );
+
+  static TextStyle font14DarkBlueMedium = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: ColorsManager.dark,
   );
 }

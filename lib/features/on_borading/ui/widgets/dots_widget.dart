@@ -46,7 +46,7 @@ class _DotsWidgetState extends State<DotsWidget> {
                       color:
                           context.read<OnBoardingCubit>().currentIndex == index
                               ? ColorsManager.mainBlue
-                              : ColorsManager.gray,
+                              : ColorsManager.maingray,
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),

@@ -43,7 +43,7 @@ class _NextAndSkipWidgetsState extends State<NextAndSkipWidgets> {
                   : 'Back',
               style: TextStyle(
                 fontSize: 15.0.sp,
-                color: ColorsManager.gray,
+                color: ColorsManager.maingray,
               ),
             ),
           ),
