@@ -4,6 +4,10 @@ import 'package:extract_text_from_audio_and_video/features/sign_up/data/repos/si
 import 'package:extract_text_from_audio_and_video/features/sign_up/logic/cubit/sign_up_state.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../../../../core/helpers/shared_pref_constans.dart';
+import '../../../../core/helpers/shared_pref_helper.dart';
+import '../../../../core/network/dio_factory.dart';
+
 class SignUpCubit extends Cubit<SignUpState> {
   final SignupRepo _signupRepo;
 
@@ -16,8 +20,7 @@ class SignUpCubit extends Cubit<SignUpState> {
       TextEditingController();
   final formKey = GlobalKey<FormState>();
 
-
-   void emitSignupStates() async {
+  void emitSignupStates() async {
     emit(const SignUpState.loading());
     final response = await _signupRepo.signup(
       UserSignUpRequestBody(
@@ -27,10 +30,17 @@ class SignUpCubit extends Cubit<SignUpState> {
         confirmPassword: passwordConfirmationController.text,
       ),
     );
-    response.when(success: (signupResponse) {
+    response.when(success: (signupResponse) async {
+      print(signupResponse.token);
+      await saveToken(signupResponse.token);
+      DioFactory.setTokenIntoHeaderAfterLogin(signupResponse.token);
       emit(SignUpState.success(user: signupResponse));
     }, failure: (error) {
       emit(SignUpState.error(error: error.apiErrorModel.message ?? ''));
     });
+  }
+
+  Future<void> saveToken(String token) async {
+    await SharedPrefHelper.setSecuredString(SharedPrefKeys.userToken, token);
   }
 }

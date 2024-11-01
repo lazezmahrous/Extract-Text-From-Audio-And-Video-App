@@ -11,7 +11,7 @@ UserSignUpResponseBody _$UserSignUpResponseBodyFromJson(
     UserSignUpResponseBody(
       fullName: json['full_name'] as String,
       token: json['token'] as String,
-      code: json['code'] as String,
+      code: (json['code'] as num).toInt(),
       message: json['message'] as String,
     );
 
