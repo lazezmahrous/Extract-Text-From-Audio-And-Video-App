@@ -49,6 +49,7 @@ class AppTextFormField extends StatelessWidget {
       autofocus: true,
       keyboardType: keyboardType,
       maxLength: maxLength,
+      maxLines: maxLength,
       decoration: InputDecoration(
         enabled: true,
         contentPadding: contentPadding ??

@@ -9,7 +9,8 @@ class ColorsManager {
   static Color maingray = HexColor('#B5B5B5');
   static Color secondGray = HexColor('#5A5A5A');
   static Color dark = HexColor('#1E1E1E');
-  static Color lighterGray = HexColor('#FFEDEDED');
+  static Color lighterGray = HexColor('#F7F9FC');
+  static Color darkGray = HexColor('#DBE0E8');
   static Color morelightGray = HexColor('#FFFDFDFF');
   static Color yellow = HexColor('#F49569');
   static Color lighYellow = HexColor('#F8B15E');

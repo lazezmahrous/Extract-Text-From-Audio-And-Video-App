@@ -30,7 +30,7 @@ class _SignUpBlocListenerState extends State<SignUpBlocListener> {
         });
       },
 
-      child: SizedBox.shrink(),
+      child: const SizedBox.shrink(),
     );
   }
 }

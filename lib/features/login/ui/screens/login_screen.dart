@@ -1,17 +1,10 @@
-import 'package:extract_text_from_audio_and_video/core/helpers/extensions.dart';
-import 'package:extract_text_from_audio_and_video/core/helpers/show_snack_bar.dart';
-import 'package:extract_text_from_audio_and_video/features/login/logic/cubit/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/global_widgets/app_back_button.dart';
-import '../../../../core/helpers/shared_pref_helper.dart';
 import '../../../../core/helpers/spacing.dart';
-import '../../../../core/routing/routers.dart';
 import '../../../../core/theming/styles.dart';
-import '../../logic/cubit/login_cubit.dart';
 import '../widgets/dont_have_account.dart';
 import '../widgets/login_bloc_listener.dart';
 import '../widgets/login_button.dart';

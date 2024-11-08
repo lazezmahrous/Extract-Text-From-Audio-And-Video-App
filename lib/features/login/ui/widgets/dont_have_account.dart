@@ -1,4 +1,3 @@
-import 'package:extract_text_from_audio_and_video/core/global_widgets/app_back_button.dart';
 import 'package:extract_text_from_audio_and_video/core/helpers/extensions.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
