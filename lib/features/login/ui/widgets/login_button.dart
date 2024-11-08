@@ -1,5 +1,4 @@
 import 'package:extract_text_from_audio_and_video/core/constant/app_loading.dart';
-import 'package:extract_text_from_audio_and_video/features/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:extract_text_from_audio_and_video/features/login/logic/cubit/login_cubit.dart';

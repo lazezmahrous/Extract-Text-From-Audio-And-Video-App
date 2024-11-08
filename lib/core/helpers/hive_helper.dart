@@ -1,6 +1,4 @@
-import 'package:extract_text_from_audio_and_video/features/login/data/models/user_login_request_body.dart';
 import 'package:extract_text_from_audio_and_video/features/sign_up/data/models/user_sign_up_request_body.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import '../global_data/models/user_data_model.dart';
@@ -35,9 +33,9 @@ class HiveHeleper {
   }
 
   // دالة لاسترجاع بيانات من الصندوق
-  static dynamic getData(String key) {
+  static UserDataModel getUserData() {
     final box = Hive.box(boxName);
-    return box.get(key);
+    return box.values.first;
   }
 
   // دالة لحذف بيانات من الصندوق

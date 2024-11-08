@@ -5,7 +5,6 @@ import 'package:extract_text_from_audio_and_video/features/login/data/models/use
 import 'package:extract_text_from_audio_and_video/features/login/data/repos/login_repo.dart';
 import 'package:extract_text_from_audio_and_video/features/login/logic/cubit/login_state.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
 import '../../../../core/global_data/models/user_data_model.dart';
 import '../../../../core/helpers/hive_helper.dart';

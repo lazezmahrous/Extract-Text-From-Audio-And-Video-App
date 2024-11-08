@@ -27,6 +27,7 @@ class _TextToSpechAppState extends State<ExtractTextFromAudioAndVideoApp> {
           theme: ThemeData(
             fontFamily: 'HindMysuru',
             primaryColor: ColorsManager.mainBlue,
+            scaffoldBackgroundColor: ColorsManager.mainWhite,
           ),
           locale: const Locale('en', 'EN'),
           localizationsDelegates: const [
@@ -37,7 +38,8 @@ class _TextToSpechAppState extends State<ExtractTextFromAudioAndVideoApp> {
           ],
           // supportedLocales: S.delegate.supportedLocales,
           debugShowCheckedModeBanner: false,
-          initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.onBoardingScreen,
+          initialRoute:
+              isLoggedInUser ? Routes.homeScreen : Routes.onBoardingScreen,
           onGenerateRoute: widget.appRouter.generateRoute,
         );
       },

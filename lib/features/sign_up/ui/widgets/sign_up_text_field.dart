@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../core/constant/app_svg.dart';
 
 class SignUpTextField extends StatelessWidget {
   const SignUpTextField(

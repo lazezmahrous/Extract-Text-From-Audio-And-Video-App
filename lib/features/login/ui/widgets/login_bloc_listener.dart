@@ -2,7 +2,6 @@ import 'package:extract_text_from_audio_and_video/core/helpers/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/helpers/shared_pref_helper.dart';
 import '../../../../core/helpers/show_snack_bar.dart';
 import '../../../../core/routing/routers.dart';
 import '../../logic/cubit/login_cubit.dart';

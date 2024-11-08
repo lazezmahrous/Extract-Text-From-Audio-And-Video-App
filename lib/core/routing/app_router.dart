@@ -1,4 +1,5 @@
 import 'package:extract_text_from_audio_and_video/core/di/dependency_injection.dart';
+import 'package:extract_text_from_audio_and_video/features/home/logic/cubit/upload_file_cubit.dart';
 import 'package:extract_text_from_audio_and_video/features/login/ui/screens/login_screen.dart';
 import 'package:extract_text_from_audio_and_video/features/on_borading/ui/screens/onboard_screen.dart';
 import 'package:extract_text_from_audio_and_video/features/sign_up/logic/cubit/sign_up_cubit.dart';
@@ -37,7 +38,10 @@ class AppRouter {
         );
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (_) => const HomeScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<UploadFileCubit>(),
+            child: const HomeScreen(),
+          ),
         );
       default:
         return MaterialPageRoute(
